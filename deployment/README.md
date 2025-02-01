@@ -65,7 +65,7 @@ Run the following command to create the Deployment:
 	Waiting for rollout to finish: 4 out of 5 new replicas have been updated...
 	Waiting for rollout to finish: 5 out of 5 new replicas have been updated...
 	deployment "nginx-deployment" successfully rolled out
-9. Verify the Update: `kubectl describe <any-pod-name>` and look for container image in the events to see the new image name
+9. Verify the Update: `kubectl describe pod <any-pod-name>` and look for container image in the events to see the new image name
 10. Rollback the Deployment
 Check rollout history: `kubectl rollout history deployment/nginx-deployment`
 Rollback to the Previous Version: `kubectl rollout undo deployment/nginx-deployment`
