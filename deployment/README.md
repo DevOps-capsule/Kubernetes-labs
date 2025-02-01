@@ -55,7 +55,7 @@ Run the following command to create the Deployment:
 	```bash
 		kubectl get replicasets
 		kubectl get pods
-5. Increase the number of replicas to 5: `kubectl scale deployment nginx-deployment --replicas=5`
+5. Increase the number of replicas to 5: `kubectl scale deployment nginx-deployment --replicas=5` ensure the scaling has finished successfully `kubectl get deployment` and wait for all of them to be running
 6.  Perform a Rolling Update: `kubectl set image deployment/nginx-deployment nginx=nginx:alpine3.20`
 7.  Monitor the Rolling Update: `kubectl rollout status deployment/nginx-deployment`
 8. Expected output
