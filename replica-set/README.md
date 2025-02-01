@@ -50,7 +50,7 @@ This lab will guide you through creating and managing a **ReplicaSet** in a Kube
 5. Test self healing  
 open 2 terminals
     ```bash
-    kubectl get pods -lw app=nginx-app # always watching the pods in terminal 1
+    kubectl get pods -wl app=nginx-app # always watching the pods in terminal 1
     kubectl delete pod <pod-name>   # delete a pod in terminal 2 and go back to terminal 1 to observe
 
 6. Create a service to access your application  
