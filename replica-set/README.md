@@ -40,17 +40,17 @@ This lab will guide you through creating and managing a **ReplicaSet** in a Kube
 3. Verify the ReplicaSet and Pods:
     ```bash
     kubectl get replicaset
-    kubectl get pods -l app=my-app
+    kubectl get pods -l app=nginx-app
 
 4. Scale the replicaset and then check the new pods
     ```bash
     kubectl scale replicaset my-replicaset --replicas=5
-    kubectl get pods -l app=my-app
+    kubectl get pods -l app=nginx-app
 
 5. Test self healing  
 open 2 terminals
     ```bash
-    kubectl get pods -lw app=my-app # always watching the pods in terminal 1
+    kubectl get pods -lw app=nginx-app # always watching the pods in terminal 1
     kubectl delete pod <pod-name>   # delete a pod in terminal 2 and go back to terminal 1 to observe
 
 6. Create a service to access your application  
@@ -62,7 +62,7 @@ Save the following YAML as `service.yaml`:
       name: my-service
     spec:
       selector:
-        app: my-app
+        app: nginx-app
       ports:
       - protocol: TCP
         port: 80
