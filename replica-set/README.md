@@ -67,7 +67,7 @@ Save the following YAML as `service.yaml`:
       - protocol: TCP
         port: 80
         targetPort: 80
-      type: ClusterIP
+      type: NodePort
 
 7. Deploy the service `kubectl apply -f service.yaml`
 8. Verify the service and look for ports `kubectl get service my-service`  
