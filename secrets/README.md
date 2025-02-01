@@ -1,5 +1,5 @@
 
-# Kubernetes ConfigMap Hands-On Lab
+# Kubernetes Secrets Hands-On Lab
 
 This lab will guide you through creating and using a **Secrets** in a Kubernetes cluster. By the end of this lab, you will understand how to store sensitive data in Secrets and inject it into Pods as environment variables, command-line arguments, or mounted files
 
