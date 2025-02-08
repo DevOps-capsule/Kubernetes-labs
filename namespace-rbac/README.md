@@ -176,7 +176,8 @@ Create a file named role-binding-dev.yaml with the following content:
 Apply the RoleBinding: `kubectl apply -f role-binding-dev.yaml`  
 
 13. Permission Verification Command: 
-`kubectl auth can-i list pods --as=system:serviceaccount:dev:my-service-account`  
+`kubectl describe rolebinding read-pods -n dev` to verify that the role binding is successful you will find the service account in the list  
+`kubectl auth can-i list pods --as=system:serviceaccount:dev:my-service-account`  # Might not work
 Expected output is `yes`
 ### Clean up
 14. Delete Namespaces
