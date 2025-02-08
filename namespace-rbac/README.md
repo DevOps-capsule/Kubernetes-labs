@@ -183,6 +183,6 @@ Expected output is `yes`
 Delete the dev and prod namespaces:
 	```bash
 	kubectl delete namespace dev
-	kubectl delete namespace prod`
+	kubectl delete namespace prod
 15. Verify Deletion
 List all namespaces to confirm deletion: `kubectl get namespaces`
