@@ -1,5 +1,5 @@
 
-# Kubernetes Statefulset Hands-On Lab
+# Kubernetes Namespaces and RBAC Hands-On Lab
 
   
 
