@@ -141,7 +141,7 @@ Check the limit range in the prod namespace: `kubectl get limitrange -n prod`
 ### Use RBAC to Restrict Access
 10. Create a service account in dev namespace:  `kubectl create serviceaccount my-service-account -n dev`  
 Verify service account creation  
-`kubectl get serviceaccount my-service-account -n default -o yaml`
+`kubectl get serviceaccount my-service-account -n dev -o yaml`
 11. Create a Role in the dev Namespace
 Create a file named `role-dev.yaml` with the following content:
 	```yaml
@@ -176,7 +176,7 @@ Create a file named role-binding-dev.yaml with the following content:
 Apply the RoleBinding: `kubectl apply -f role-binding-dev.yaml`  
 
 13. Permission Verification Command: 
-`kubectl auth can-i list pods --as=system:serviceaccount:default:my-service-account`  
+`kubectl auth can-i list pods --as=system:serviceaccount:dev:my-service-account`  
 Expected output is `yes`
 ### Clean up
 14. Delete Namespaces
